@@ -4,14 +4,17 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
-import android.util.Log;
+
+import com.snowpear.common.Utils;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * 图案类,指的是一个个图案
+ */
 public abstract class Pattern {
 
-    private static final String TAG = Pattern.class.getSimpleName();
     private Context context;
 
     /**
@@ -105,7 +108,7 @@ public abstract class Pattern {
     }
 
     final public synchronized void setSelected() {
-        Log.d(TAG, "选择了");
+        Utils.debug("选择了");
         //此处执行一次动画
         stopAnim();
 

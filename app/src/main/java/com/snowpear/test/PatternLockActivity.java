@@ -1,16 +1,19 @@
-package com.snowpear.patternlock;
+package com.snowpear.test;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.ViewGroup;
 
-public class MainActivity extends AppCompatActivity {
+import com.snowpear.patternlock.CirclePattern;
+import com.snowpear.patternlock.PatternView;
+import com.snowpear.lock.R;
+
+public class PatternLockActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_pattern_lock);
         PatternView patternView = new PatternView(this, CirclePattern.class);
         ((ViewGroup)findViewById(R.id.container)).addView(patternView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }

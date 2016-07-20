@@ -9,9 +9,10 @@ import android.graphics.PointF;
 import android.os.Build;
 import android.os.Vibrator;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.snowpear.common.Utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -23,8 +24,6 @@ import java.util.Comparator;
  * 图案解锁的主界面
  */
 final public class PatternView extends View implements Pattern.PatternInterface {
-
-    private static final String TAG = PatternView.class.getSimpleName();
 
     public PatternView(Context context) {
         super(context);
@@ -276,7 +275,7 @@ final public class PatternView extends View implements Pattern.PatternInterface 
     private void verify() {
         result = VERIFY_FAILED;
         invalidate();
-        Log.d(TAG, "输出坐标顺序为:" + selectPatterns.toString());
+        Utils.debug("输出坐标顺序为:" + selectPatterns.toString());
         postDelayed(resetRunnable, 1000);
     }
 

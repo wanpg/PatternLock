@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.snowpear.patternlock">
+    package="com.snowpear.lock">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.snowpear.test.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.snowpear.test.PatternLockActivity"
+            android:label="@string/pattern_lock" />
+        <activity android:name="com.snowpear.test.FingerLockActivity"
+            android:label="@string/finger_lock"/>
+        <activity android:name="com.example.android.fingerprintdialog.MainActivity"/>
+        <activity android:name="com.example.android.fingerprintdialog.SettingsActivity"/>
     </application>
 
 </manifest>

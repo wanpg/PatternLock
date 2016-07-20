@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
+import com.snowpear.common.Utils;
+
 /**
  * Created by wangjinpeng on 16/4/21.
  */

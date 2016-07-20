@@ -6,7 +6,8 @@ import android.os.Build;
 import android.security.KeyPairGeneratorSpec;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
-import android.util.Log;
+
+import com.snowpear.common.Utils;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -82,7 +83,7 @@ final public class PatternLock {
                 generator.init(parameterSpec);
 
                 SecretKey key = generator.generateKey();
-                Log.d("wanpg", "创建的keypair私钥：" + key.getAlgorithm());
+                Utils.debug("创建的keypair私钥：" + key.getAlgorithm());
             }
         } catch (KeyStoreException | InvalidAlgorithmParameterException | NoSuchProviderException | IOException | NoSuchAlgorithmException | CertificateException e) {
             e.printStackTrace();
@@ -102,7 +103,7 @@ final public class PatternLock {
                 e.printStackTrace();
             }
         }
-        Log.d("wanpg", "keystore---:" + keyAliases.toString());
+        Utils.debug("keystore---:" + keyAliases.toString());
     }
 
     public static SecretKey generateKey(char[] passphraseOrPin, byte[] salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
