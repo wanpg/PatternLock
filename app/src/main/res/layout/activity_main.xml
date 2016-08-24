@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
-    <Button
-        android:id="@+id/btn_1"
-        android:onClick="onClick"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/pattern_lock"/>
-    <Button
-        android:id="@+id/btn_2"
-        android:onClick="onClick"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/toggle_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="启用密码"/>
+        <Button
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="更改密码"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lock_setting_area"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/finger_lock"/>
-    <Button
-        android:id="@+id/btn_3"
-        android:onClick="onClick"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="指纹解锁样例"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/auto_lock_area"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="自动锁定"/>
+            <TextView
+                android:id="@+id/tv_lock_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/auto_exit_area"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="自动登出"/>
+            <ToggleButton
+                android:id="@+id/toggle_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fingerprint_lock_area"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="指纹解锁"/>
+            <ToggleButton
+                android:id="@+id/toggle_fingerprint_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
 </LinearLayout>

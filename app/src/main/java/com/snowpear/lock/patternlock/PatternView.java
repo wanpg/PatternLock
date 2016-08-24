@@ -1,4 +1,4 @@
-package com.snowpear.patternlock;
+package com.snowpear.lock.patternlock;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,7 +12,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.snowpear.common.Utils;
+import com.snowpear.lock.LockManager;
+import com.snowpear.lock.Utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -276,6 +277,7 @@ final public class PatternView extends View implements Pattern.PatternInterface 
         result = VERIFY_FAILED;
         invalidate();
         Utils.debug("输出坐标顺序为:" + selectPatterns.toString());
+        Utils.debug("输出加密结果为:" + LockManager.getInstance().sign(selectPatterns.toString()));
         postDelayed(resetRunnable, 1000);
     }
 

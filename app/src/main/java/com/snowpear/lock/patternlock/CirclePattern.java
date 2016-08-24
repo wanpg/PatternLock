@@ -1,10 +1,10 @@
-package com.snowpear.patternlock;
+package com.snowpear.lock.patternlock;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
-import com.snowpear.common.Utils;
+import com.snowpear.lock.Utils;
 
 /**
  * Created by wangjinpeng on 16/4/21.
@@ -36,7 +36,7 @@ public class CirclePattern extends Pattern {
     }
 
     @Override
-    protected int getDuation() {
+    protected int getDuration() {
         return 240;
     }
 

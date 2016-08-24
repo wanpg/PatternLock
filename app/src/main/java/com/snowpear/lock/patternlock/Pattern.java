@@ -1,11 +1,11 @@
-package com.snowpear.patternlock;
+package com.snowpear.lock.patternlock;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
 
-import com.snowpear.common.Utils;
+import com.snowpear.lock.Utils;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -30,7 +30,7 @@ public abstract class Pattern {
         this.patternInterface = patternInterface;
         this.context = context;
         //计算动画执行的次数  最好是
-        maxTime = getDuation() / 16;
+        maxTime = getDuration() / 16;
     }
 
     public interface PatternInterface {
@@ -133,7 +133,7 @@ public abstract class Pattern {
 
     protected abstract float getMaxDistance();
 
-    protected abstract int getDuation();
+    protected abstract int getDuration();
     protected abstract void onAnimProgress(float progress);
     protected abstract void onAnimStop();
 

@@ -4,8 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewGroup;
 
-import com.snowpear.patternlock.CirclePattern;
-import com.snowpear.patternlock.PatternView;
+import com.snowpear.lock.patternlock.CirclePattern;
+import com.snowpear.lock.patternlock.PatternView;
 import com.snowpear.lock.R;
 
 public class PatternLockActivity extends AppCompatActivity {

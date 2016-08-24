@@ -21,10 +21,13 @@
         <activity
             android:name="com.snowpear.test.PatternLockActivity"
             android:label="@string/pattern_lock" />
-        <activity android:name="com.snowpear.test.FingerLockActivity"
-            android:label="@string/finger_lock"/>
-        <activity android:name="com.example.android.fingerprintdialog.MainActivity"/>
-        <activity android:name="com.example.android.fingerprintdialog.SettingsActivity"/>
+        <activity
+            android:name="com.snowpear.test.FingerPrintLockActivity"
+            android:label="@string/finger_lock" />
+        <activity
+            android:name="com.snowpear.test.NumberLockActivity"
+            android:label="@string/number_lock" />
+        <activity android:name="com.snowpear.test.ChoosePasswordTypeActivity"></activity>
     </application>
 
 </manifest>
